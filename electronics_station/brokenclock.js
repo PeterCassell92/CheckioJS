@@ -57,7 +57,7 @@ function brokenClock(start, wrongtime, error){
 
 	// get true time by working out time error across the period and accounting for remaining time that is not part of an error cycle.
 	truetime = new Date(((errorcount)*(period*1000)) + start.getTime());
-	console.log(truetime.toUTCString().match(re)[0]);
+	console.log(truetime.toTimeString());
 
 	return truetime.toUTCString().match(re)[0];
 }
